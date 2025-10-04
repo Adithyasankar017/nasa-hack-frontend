@@ -1,0 +1,344 @@
+/* Importing the 'Montserrat' font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Basic styles for the entire page */
+body {
+    background-color: #0d0d1b;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Header and navigation styling */
+.hero {
+    background-image: url('images/hero-bg.png'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 50px;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.hero-content {
+    margin-top: 100px;
+    width: 60%;
+    text-align: left;
+    align-self: flex-start;
+    padding-left: 100px;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    width: 80%;
+    line-height: 1.8;
+}
+
+/* Button styles */
+.btn {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: #0d0d1b;
+}
+
+.btn-2 { /* Reused for exoplanet buttons if needed later, currently not used in HTML for exoplanet explorer */
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 15px;
+}
+
+.btn-2:hover {
+    background-color: #ffffff;
+    color: #0d0d1b;
+}
+
+/* Info cards section */
+.info-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: -100px; /* Overlap with the hero section */
+}
+
+.card {
+    background-color: #1a1a2b;
+    padding: 40px 20px;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: #6a8cff;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.card .subtitle {
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* Mission and Function (now Exoplanet Explorer) sections */
+.mission, .function {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+    gap: 50px;
+}
+
+.content-text {
+    width: 40%;
+}
+
+.content-text h2 {
+    font-size: 3em;
+    margin-top: 0;
+}
+
+.content-text p {
+    font-size: 1.1em;
+}
+
+.content-image {
+    width: 40%;
+}
+
+.content-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+    color: #6a8cff;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a2b;
+    border-top: 1px solid #333;
+    font-size: 0.9em;
+}
+
+/* Exoplanet data explorer styles */
+.exoplanet-explorer .controls { /* Apply controls style within this section */
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 15px; /* Adjust gap for better fitting */
+    margin-top: 30px; /* Space from description text */
+    justify-content: flex-start; /* Align to the left */
+}
+
+.exoplanet-explorer #searchInput, 
+.exoplanet-explorer #filterMethod {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1a1b40;
+    color: #e0e0e0;
+    flex-grow: 1; /* Allow inputs to grow and fill space */
+    max-width: 300px; /* Limit max width for better appearance */
+}
+
+/* Styling for the exoplanet list display section */
+.exoplanet-display {
+    padding-top: 50px; /* Adjust padding if needed */
+    flex-direction: row-reverse; /* Swap image and text for this section */
+}
+
+.exoplanet-results-container {
+    height: 400px; /* Fixed height for scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling */
+    background-color: #1a1b40;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #333;
+}
+
+#exoplanet-list {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically inside the scrollable container */
+    gap: 15px;
+    padding-right: 10px; /* Space for scrollbar */
+}
+
+.exoplanet-card {
+    background-color: #0d0d1b; /* Darker background for individual cards */
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 15px;
+    width: 100%; /* Take full width of its container */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.exoplanet-card:hover {
+    transform: translateY(-3px);
+    background-color: #15152a; /* Slightly lighter on hover */
+}
+
+.exoplanet-card h2 {
+    color: #90CAF9;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.exoplanet-card p {
+    margin: 3px 0;
+    font-size: 0.9em;
+}
+
+/* Scrollbar styling for exoplanet-results-container */
+.exoplanet-results-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.exoplanet-results-container::-webkit-scrollbar-track {
+    background: #1a1b40;
+    border-radius: 10px;
+}
+
+.exoplanet-results-container::-webkit-scrollbar-thumb {
+    background: #4a4a6b;
+    border-radius: 10px;
+}
+
+.exoplanet-results-container::-webkit-scrollbar-thumb:hover {
+    background: #6a6ab0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .hero-content {
+        padding-left: 20px;
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .info-cards {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .mission, .function {
+        flex-direction: column;
+        padding: 50px 20px;
+        gap: 30px;
+    }
+
+    .exoplanet-display {
+        flex-direction: column; /* Revert order for mobile if image is first */
+    }
+
+    .content-text, .content-image {
+        width: 100%;
+        text-align: center;
+    }
+
+    .exoplanet-explorer .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .exoplanet-explorer #searchInput, 
+    .exoplanet-explorer #filterMethod {
+        width: 90%;
+        max-width: none; /* Remove max-width on smaller screens */
+    }
+
+    .exoplanet-results-container {
+        height: 300px; /* Adjust height for mobile */
+    }
+}

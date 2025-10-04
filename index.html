@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoplanet Data Explorer 🌌</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <nav>
+            <div class="logo">A-SPACE</div>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Satellite</a></li>
+                <li><a href="#">Agus Salman</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>ORBIT THE EARTH</h1>
+            <p>Reporting from the NASA page, a satellite is an object that orbits, or moves, in a path, around a larger object in space. There are two different types of satellites: natural and manmade. Dr. Allan McInnes, a satellite is anything that orbits around a larger object.</p>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="info-cards">
+            <div class="card">
+                <h2>LEO</h2>
+                <p>300–1500 KM</p>
+                <p class="subtitle">Low Earth Orbit</p>
+            </div>
+            <div class="card">
+                <h2>HI - SPEED</h2>
+                <p>22,236 MI</p>
+                <p class="subtitle">Orbit Geostasioner</p>
+            </div>
+            <div class="card">
+                <h2>EARTH</h2>
+                <p>365 DAY</p>
+                <p class="subtitle">Orbit Periode</p>
+            </div>
+        </section>
+
+        <section class="exoplanet-explorer mission">
+            <div class="content-text">
+                <p class="section-title">— EXOPLANET EXPLORER</p>
+                <h2>FIND NEW WORLDS</h2>
+                <p>Dive into the vast universe of exoplanets! Filter by discovery method or search by name to uncover fascinating details about distant worlds confirmed by missions like Kepler and TESS.</p>
+                <div class="controls">
+                    <input type="text" id="searchInput" placeholder="Search for a planet...">
+                    <select id="filterMethod">
+                        <option value="">All Discovery Methods</option>
+                        <option value="Transit">Transit</option>
+                        <option value="Radial Velocity">Radial Velocity</option>
+                        <option value="Imaging">Imaging</option>
+                        <option value="Microlensing">Microlensing</option>
+                        <option value="Timing Variations">Timing Variations</option>
+                        <option value="Astrometry">Astrometry</option>
+                        <option value="Orbital Brightness Modulation">Orbital Brightness Modulation</option>
+                    </select>
+                </div>
+            </div>
+            <div class="content-image">
+                <img src="images/exoplanet-discovery.jpg" alt="Exoplanet Discovery"> </div>
+        </section>
+
+        <section class="exoplanet-display function">
+             <div class="content-image">
+                <img src="images/satellite.jpg" alt="Satellite observing exoplanets"> </div>
+            <div class="content-text exoplanet-results-container">
+                <p class="section-title">— DISCOVERIES</p>
+                <h2>CONFIRMED WORLDS</h2>
+                <div id="exoplanet-list">
+                    <p>Loading exoplanet data... Please wait.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Technology | Created by Agus Salman | Web Design ©2022 | Supported by A-SPACE</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
